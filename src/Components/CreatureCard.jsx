@@ -1,11 +1,15 @@
 import React from "react";
 import creature from "../Assets/creature.jpeg";
+
+
 function CreatureCard({ id,version, available, onSelect, isSelected }) {
+
   const handleClick = () => {
     if (available) {
       onSelect(id);
     }
   };
+  
   return (
     <div
       className=" flex flex-col justify-center items-center group"
@@ -32,7 +36,7 @@ function CreatureCard({ id,version, available, onSelect, isSelected }) {
           </div>
         )}
         {
-          isSelected && (
+          isSelected && available && (
             <div className=" absolute bottom-3 rounded-lg left-3 w-fit bg-zinc-800 px-5 uppercase">
           <p className=" text-white text-xs font-thin">Selected</p>
         </div>

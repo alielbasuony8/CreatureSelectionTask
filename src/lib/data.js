@@ -22,7 +22,7 @@ export const CreaturesData = [
   {
     id: 5,
     version: 8823,
-    available: false,
+    available: true,
   },
   {
     id: 6,
